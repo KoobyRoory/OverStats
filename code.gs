@@ -6,8 +6,14 @@ function callOverfastAPI(player) {
   //parse the JSON reply
   var json= response.getContentText();
   var data = JSON.parse(json);
+
+  let text = "";
+for (const i in data) {
+  text += i + ", ";
+ 
+}
+   Logger.log(text);
   
-  Logger.log(data);
 }
 
 /*function displayPlayerData() {
